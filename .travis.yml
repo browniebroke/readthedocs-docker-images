@@ -6,6 +6,8 @@ env:
     - PIPENV_VENV_IN_PROJECT=1
     - PIPENV_IGNORE_VIRTUALENVS=1
 before_install:
+  # Freeze pip to 18.0 for now
+  - pip install 'pip>=18.0,<18.1'
   - pip install pipenv
 install:
   - pipenv install
